@@ -14,7 +14,7 @@ import java.util.List;
 @Repository
 public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
-    // define field for entitymanager
+    // define field for entityManager
     private EntityManager entityManager;
 
     // set up constructor injection
@@ -25,7 +25,7 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
     @Override
     public List<Employee> findAll() {
-        // Transactional handles transaction management so we don't have to munually start and commit transaction
+        // Transactional handles transaction management so we don't have to manually start and commit transaction
 
         // get the current hibernate session
         Session currentSession = entityManager.unwrap(Session.class);
